@@ -1,0 +1,7 @@
+{
+  "name": "bug-report",
+  "private": true,
+  "devDependencies": {
+    "npm-check-updates": "^11.5.1"
+  }
+}
