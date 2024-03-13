@@ -7,6 +7,11 @@
   outputs = { flakelight, ... }@inputs:
     flakelight ./. {
       inherit inputs;
-      package = pkgs: pkgs.hello;
+
+      perSystem = pkgs: {
+        packages = {
+          hello2 = pkgs.hello;
+        };
+      };
     };
 }
