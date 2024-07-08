@@ -1,7 +1,7 @@
-{ inputs', ... }:
+{ inputs, pkgs, ... }:
 
 {
   environment.systemPackages = [
-    inputs'.self.packages.hello1
+    inputs.self.packages.${pkgs.system}.hello1
   ];
 }

@@ -17,5 +17,16 @@
           self.nixosModules.default
         ];
       };
+
+      nixosConfigurations.vm3 = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        modules = [
+          self.nixosModules.wrapped
+        ];
+      };
+
+      nixosModules.wrapped = { ... }@args: import ./nix/nixosModules/_default.nix ({ inherit inputs; } // args);
     };
 }
+
