@@ -7,7 +7,7 @@
     let
       system = "x86_64-linux";
     in
-    flakelight ./. {
+    flakelight ./. ({ lib, ... }: {
       inherit inputs;
 
       nixosConfigurations.vm2 = nixpkgs.lib.nixosSystem {
@@ -26,7 +26,11 @@
         ];
       };
 
-      nixosModules.wrapped = { ... }@args: import ./nix/nixosModules/_default.nix ({ inherit inputs; } // args);
-    };
+      nixosModules.wrapped =
+        let
+          f = lib.toFunction import ./nix/nixosModules/_default.nix;
+          g = args: f (args // { inherit inputs; });
+        in
+        lib.setFunctionArgs g (lib.functionArgs f);
+    });
 }
-
