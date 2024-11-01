@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake1.url = "path:../flake1";
   };
   outputs = { nixpkgs, flake1, ... }@inputs:

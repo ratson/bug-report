@@ -1,7 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-    flakelight.url = "github:nix-community/flakelight";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flakelight.url = "github:ratson/flakelight/fix-module-args";
   };
   outputs = { flakelight, nixpkgs, self, ... }@inputs:
     let

@@ -5,15 +5,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1730350332,
-        "narHash": "sha256-CExXJMTTMUkEGw45GfcFzo7KKdsJ1YtlezrBxCFKmOs=",
-        "owner": "nix-community",
+        "lastModified": 1730477719,
+        "narHash": "sha256-H1lJACY1fwYjW3gnIRpEr3y+sfMhih+fhQ4fx6tTIrE=",
+        "owner": "ratson",
         "repo": "flakelight",
-        "rev": "aaf1441ff76e4e1c4a5dc65a37b5f14f8d241e07",
+        "rev": "d80efcfbc61a50bb2e1dfbd955b55a9a08d2e757",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
+        "owner": "ratson",
+        "ref": "fix-module-args",
         "repo": "flakelight",
         "type": "github"
       }
@@ -44,9 +45,10 @@
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
+        "owner": "NixOS",
         "ref": "nixos-unstable",
-        "type": "indirect"
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "root": {
