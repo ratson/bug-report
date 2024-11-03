@@ -1,0 +1,3 @@
+{
+  greet = pkgs: pkgs.hello;
+}
